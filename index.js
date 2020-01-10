@@ -1,10 +1,9 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
-const Help_BOOK = new Discord.WebhookClient(process.env.helpid, process.env.helptoken)
 
 //instance
 bot.on('ready', function () {
-	bot.user.setGame('/help').catch(console.error)
+	bot.user.setGame('Minecraft').catch(console.error)
 })
 
 bot.on('message', function (message) {
