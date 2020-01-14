@@ -1,5 +1,7 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
+const prefix = "**"
+const suffix = "**"
 
 //instance
 bot.on('ready', function () {
@@ -7,6 +9,7 @@ bot.on('ready', function () {
 })
 
 bot.on('message', function (message) {
+	if (message.content[:2] === prefix AND message.content[-2:] === suffix) {
 	if (message.content === '**help**') {
 		Help_BOOK.send("Liste des commandes du serveur discord")
 		let cmdEmbed = new Discord.RichEmbed()
@@ -32,6 +35,7 @@ bot.on('message', function (message) {
 			.addField("V.I.P+", "Youtuber")
 		Help_BOOK.send(gradesEmbed)
 	}*/
+	}
 })
 
 bot.login(process.env.TOKEN)
