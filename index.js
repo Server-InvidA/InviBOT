@@ -7,16 +7,16 @@ bot.on('ready', function () {
 })
 
 bot.on('message', function (message) {
-	/*if (message.content === '/help') {
+	if (message.content === '**help**') {
 		Help_BOOK.send("Liste des commandes du serveur discord")
 		let cmdEmbed = new Discord.RichEmbed()
 			.setColor("#0EB30E")
-			.addField("!help :", "Affiche la liste des commandes du serveur discord")
-			.addField("?grades :", "Affiche la liste des grades en jeu, ?grades-<nom du grade ou 'infos'>")
+			.addField("**help** :", "Affiche la liste des commandes du serveur discord")
+			.addField("...", "Aucunes autres formules pour le moment.")
 		Help_BOOK.send(cmdEmbed)
 	}
 
-	if (message.content === '?grades-bourgeois') {
+	/*if (message.content === '?grades-bourgeois') {
 		Help_BOOK.send("Liste des commandes du serveur discord")
 		let gradesEmbed = new Discord.RichEmbed()
 			.setColor("#0EB30E")
